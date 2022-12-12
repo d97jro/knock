@@ -21,5 +21,5 @@ RUN nix build
 
 FROM busybox:1.35-musl
 ARG BUILD_DIR
-COPY --from=builder "$BUILD_DIR"/result/bin/knock /
-ENTRYPOINT ["/knock"]
+COPY --from=builder "$BUILD_DIR"/result/bin/knock /usr/local/bin/
+ENTRYPOINT ["/usr/local/bin/knock"]
