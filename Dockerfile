@@ -1,5 +1,5 @@
 # Build Knock from repo with Docker to avoid dependency hell on your host
-# machine. The multistage build produces a slim scratch-based container with
+# machine. The multistage build produces a slim busybox-based container with
 # only the Knock binary.
 #
 # Building:
