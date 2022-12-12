@@ -19,7 +19,7 @@ WORKDIR "$BUILD_DIR"
 COPY . ./
 RUN nix build
 
-FROM [scratch](busybox:1.35-musl)
+FROM busybox:1.35-musl
 ARG BUILD_DIR
 COPY --from=builder "$BUILD_DIR"/result/bin/knock /
 ENTRYPOINT ["/knock"]
